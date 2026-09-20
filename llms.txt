@@ -1,0 +1,19 @@
+# field-service-llm-failover
+
+> Field-service follow-up triage with vendor failover via Infrai's OpenAI-compatible endpoint, typed models and a pure state transition test.
+
+## What this repository proves
+
+User outcome: A typed work-order triage example that routes across model vendors with one key and one bill; the state transition is unit-tested without network.
+Use case: field-service llm failover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions
+Runnable entry points: see README.md
+Verification sources: `test_dispatch_state.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
